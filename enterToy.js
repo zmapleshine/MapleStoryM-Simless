@@ -7,10 +7,12 @@ const $base64 = new Base64();
 let respBody = $base64.decode(obj)
 console.log("Fake Body:",respBody)
 console.log("Response body:",$response.body)
-$response.headers["errorCode"]=0
-console.log("Fake Header:",$response.headers)
+
+let headers = $response.headers
+headers["errorCode"]=0
+console.log("Fake Header:",headers)
 console.log("Response Header:",$response.headers)
-$done({ respBody });
+$done({ body:respBody, headers:headers });
 
 function Base64() {
     // private property
