@@ -3,8 +3,10 @@ let obj = "eyJlcnJvckNvZGUiOjAsInJlc3VsdCI6eyJzZXJ2aWNlIjp7InRpdGxlIjoiTWFwbGVTd
 const respHeader = $response.headers
 respHeader["errorCode"] = "0"
 const $base64 = new Base64();
+console.log(respHeader)
 let respBody = JSON.parse($base64.decode(obj))
-$done({ body: respBody });
+console.log(respBody)
+$done({ respBody });
 
 function Base64() {
     // private property
