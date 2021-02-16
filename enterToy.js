@@ -5,7 +5,8 @@ respHeader["errorCode"] = "0"
 const $base64 = new Base64();
 console.log(respHeader)
 let respBody = JSON.parse($base64.decode(obj))
-console.log(respBody)
+console.log(respBody,typeof(respBody))
+console.log($response.body,typeof($response.body))
 $done({ respBody });
 
 function Base64() {
