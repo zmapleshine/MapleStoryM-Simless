@@ -1,4 +1,4 @@
-const version = v1.0
+const version = "v1.0"
 console.log("Script Version:",version)
 const respHeader = $response.headers
 console.log("Response Header:",respHeader)
