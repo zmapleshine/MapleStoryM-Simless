@@ -4,7 +4,7 @@ const respHeader = $response.headers
 respHeader["errorCode"] = "0"
 const $base64 = new Base64();
 let respBody = JSON.parse($base64.decode(obj))
-$done({ body: respBody });
+$done({ body: obj });
 
 function Base64() {
     // private property
